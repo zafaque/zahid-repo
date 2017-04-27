@@ -1,0 +1,60 @@
+
+public class TimeTable {
+    /*public static void main(String[] args) {
+        int row, col;
+
+        for (row=1; row <= 9; row++){
+            System.out.format("%4d", row);
+        }
+        System.out.println();
+        System.out.println("---------------------------------------------------");
+
+        for (row=1; row <= 9; row++){
+            System.out.format("%4d |", row);
+
+            for (col=1; col <= 9; col++){
+                System.out.format("%4d", row*col);
+            }
+            System.out.println();
+        }
+        for (row=1; row <= 9; row++){
+            System.out.print(row + " ");
+            System.out.println();
+        }
+    }*/
+    public static void main(String[] args) {
+        TimeTable aTimeTable = new TimeTable();
+        aTimeTable.printTimeTable(9);
+    }
+
+    private void printTimeTable(int n)
+    {
+        for(int i = -1; i <= n; i++)
+        {
+            if (i == -1) {
+                System.out.print("\t|");
+            }
+            else if (i == 0) {
+                System.out.print("------------");
+            }
+            else if (i > 0) {
+                System.out.printf("%1$d\t|", i);
+            }
+
+            for(int j = 1; j <= n; j++)
+            {
+                if (i == -1) {
+                    System.out.printf("\t%1$d", j);
+                    continue;
+                }
+                else if (i == 0) {
+                    System.out.print("--------");
+                    continue;
+                }
+
+                System.out.printf("\t%1$d", i * j);
+            }
+            System.out.println();
+        }
+    }
+}
