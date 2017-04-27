@@ -1,0 +1,21 @@
+public class ComputePI {
+    public static void main(String[] args) {
+        double sum = 0;
+        int maxDenominator = 10;
+        for (int denominator = 1; denominator <= maxDenominator; denominator = denominator+2){
+            if (denominator%4 == 1){
+                sum = sum + 1/denominator;
+                System.out.print(sum);
+            }else if (denominator%4 == 3){
+                sum = sum - 1/denominator;
+              System.out.print(sum);
+            }
+            //System.out.println(sum);
+            else {
+                System.out.println("This is crazy");
+            }
+        }
+        System.out.println(sum);
+
+    }
+}
