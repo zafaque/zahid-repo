@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//this is for leap year
 public class LeapYear {
     public static void main(String[] args) {
         System.out.println("Enter the year");
@@ -22,6 +22,5 @@ public class LeapYear {
         }else {
             System.out.println("not adult");
         }
-
     }
 }
